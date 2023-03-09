@@ -1,0 +1,13 @@
+{
+    "version": "test",
+    "date": "3-8-23",
+    "projects": [
+        {
+            "project": "On Deck!",
+            "img": "dummy image",
+            "description": "blah blah blah",
+            "github-url": "dummy-url",
+            "tags": ["React", "TypeScript", "Firebase", "Featured"]
+        }
+    ]
+}
