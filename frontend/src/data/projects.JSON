@@ -3,10 +3,19 @@
     "date": "3-8-23",
     "projects": [
         {
-            "project": "On Deck!",
+            "id": 1,
+            "name": "On Deck!",
             "img": "dummy image",
             "description": "blah blah blah",
-            "github-url": "dummy-url",
+            "githubUrl": "dummy-url",
+            "tags": ["React", "TypeScript", "Firebase", "Featured"]
+        },
+        {
+            "id": 2,
+            "name": "#2",
+            "img": "dummy image",
+            "description": "blah blah",
+            "githubUrl": "dummy-url",
             "tags": ["React", "TypeScript", "Firebase", "Featured"]
         }
     ]

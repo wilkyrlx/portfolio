@@ -1,8 +1,11 @@
+import IProject from "../types/IProject";
 
-function ProjectTab() {
+function ProjectTab({...project}: IProject) {
     return (
-        <div className="project-tab">
-            
+        <div className="project-tab" key={project.id}>
+            <h2>{project.name}</h2>
+            <p>{project.description}</p>
+            <p>{project.githubUrl}</p>
         </div>
     );
 }
