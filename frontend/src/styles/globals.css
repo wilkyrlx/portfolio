@@ -5,12 +5,18 @@
 
 .card {
     flex-basis: calc(33.33% - 20px);
-    /* Adjust the width as per your preference */
     margin-bottom: 20px;
     border-radius: 10px;
     border: 1px solid black;
     background-color: white;
     margin: 10px;
+    flex-direction: column;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    border: 1px solid var(--primary);
+    opacity: 75%;
 }
 
 .tab-header {
@@ -26,18 +32,3 @@
     height: 100%;
     object-fit: cover;
 }
-
-@media (max-width: 90ch) {
-
-    /* Styles for mobile devices */
-    .card {
-        width: 100%;
-    }
-}
-
-.grid {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(var(--min-item-width, 30ch), 1fr));
-    gap: var(--space-md);
-  }

@@ -6,16 +6,32 @@
             "id": 1,
             "name": "On Deck!",
             "img": "frontend\\src\\images\\sports.jpg",
-            "description": "blah blah blah",
+            "description": "Developed a scalable e-commerce platform with advanced search functionality, seamless payment integration, and personalized recommendations, resulting in a 30% increase in conversion rates.",
             "githubUrl": "dummy-url",
-            "tags": ["React", "TypeScript", "Firebase", "Featured"],
-            "demoUrl": "dummy-url"
+            "demoUrl": "dummy-url",
+            "tags": ["React", "TypeScript", "Firebase", "Featured"]
         },
         {
             "id": 2,
             "name": "#2",
             "img": "dummy image",
-            "description": "blah blah",
+            "description": "Designed and implemented a real-time data analytics dashboard using Python and Elasticsearch, empowering business stakeholders to make data-driven decisions and reducing reporting time by 50%.",
+            "githubUrl": "dummy-url",
+            "tags": ["React", "TypeScript", "Firebase", "Featured"]
+        },
+        {
+            "id": 3,
+            "name": "#3",
+            "img": "dummy image",
+            "description": "Led a cross-functional team in building a mobile app for a healthcare startup, utilizing React Native and Firebase, which enhanced patient engagement and achieved a 20% reduction in appointment cancellations.",
+            "githubUrl": "dummy-url",
+            "tags": ["React", "TypeScript", "Firebase", "Featured"]
+        },
+        {
+            "id": 4,
+            "name": "#4",
+            "img": "dummy image",
+            "description": "Collaborated with a team of engineers to architect and implement a microservices-based architecture using Docker and Kubernetes, resulting in improved scalability, fault tolerance, and reduced deployment time by 75%.",
             "githubUrl": "dummy-url",
             "tags": ["React", "TypeScript", "Firebase", "Featured"]
         }
