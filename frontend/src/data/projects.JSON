@@ -5,7 +5,7 @@
         {
             "id": 1,
             "name": "On Deck!",
-            "img": "dummy image",
+            "img": "frontend\\src\\images\\sports.jpg",
             "description": "blah blah blah",
             "githubUrl": "dummy-url",
             "tags": ["React", "TypeScript", "Firebase", "Featured"],
