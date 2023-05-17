@@ -7,9 +7,7 @@ function Projects() {
         <div>
             <h1>Projects</h1>
             {
-                
-                projects.projects.map((project: any) => {
-                    const projectData: IProject = project;
+                projects.projects.map((projectData: IProject) => {
                     return (
                         <ProjectTab {...projectData} />
                     )

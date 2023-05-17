@@ -8,7 +8,8 @@
             "img": "dummy image",
             "description": "blah blah blah",
             "githubUrl": "dummy-url",
-            "tags": ["React", "TypeScript", "Firebase", "Featured"]
+            "tags": ["React", "TypeScript", "Firebase", "Featured"],
+            "demoUrl": "dummy-url"
         },
         {
             "id": 2,

@@ -6,6 +6,7 @@ function ProjectTab({...project}: IProject) {
             <h2>{project.name}</h2>
             <p>{project.description}</p>
             <p>{project.githubUrl}</p>
+            <p>{project.demoUrl}</p>
         </div>
     );
 }
