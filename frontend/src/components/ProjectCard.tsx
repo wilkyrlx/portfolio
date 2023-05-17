@@ -2,13 +2,15 @@ import IProject from "../types/IProject";
 import Image from 'next/image';
 import projects from '../data/projects.json' assert { type: 'json' };
 
+// blur the entire background, show the overlay
 function openProject(projectId: number) {
-    console.log("Opening project");
-
-    // blur the entire background
     const mainContent: HTMLElement = document.querySelector('#main-content') as HTMLElement;
-    const overlay: HTMLElement = document.querySelector('#project-overlay-' + projectId.toString()) as HTMLElement;
-    mainContent.classList.add('blur');
+    const overlay: HTMLElement | null = document.querySelector('#project-overlay-' + projectId.toString());
+    if (!overlay) {
+        console.error("Overlay not found on open");
+        return;
+    }
+    mainContent.classList.add('blur-sm');
     overlay.classList.remove('collapse');
 }
 
@@ -18,8 +20,8 @@ function ProjectCard({ ...project }: IProject) {
             <div className="tab-header">
                 <Image src={"/images/" + project.img} alt="" width={100} height={100} />
             </div>
-                <h2 className="ml-10 text-xl font-bold text-gray-800">{project.name}</h2>
-                <p className="ml-10 text-gray-500">{project.description}</p>           
+                <h2 className="mx-10 text-xl font-bold text-gray-800">{project.name}</h2>
+                <p className="mx-10 text-gray-500">{project.description}</p>           
         </div>
     );
 }

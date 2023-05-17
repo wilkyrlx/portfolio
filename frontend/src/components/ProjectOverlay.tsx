@@ -2,14 +2,15 @@ import IProject from "@/types/IProject";
 import projects from '../data/projects.json' assert { type: 'json' };
 import Image from 'next/image';
 
-
+// unblur the entire background, hide the overlay
 function closeOverlay(projectId: number) {
-    console.log("Closing project");
-
-    // unblur the entire background
     const mainContent: HTMLElement = document.querySelector('#main-content') as HTMLElement;
-    const overlay: HTMLElement = document.querySelector('#project-overlay-' + projectId.toString()) as HTMLElement;
-    mainContent.classList.remove('blur');
+    const overlay: HTMLElement | null = document.querySelector('#project-overlay-' + projectId.toString());
+    if (!overlay) {
+        console.error("Overlay not found on close");
+        return;
+    }
+    mainContent.classList.remove('blur-sm');
     overlay.classList.add('collapse');
 }
 

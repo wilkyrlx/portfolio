@@ -2,20 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.card {
-    flex-basis: calc(33.33% - 20px);
-    border: 1px solid transparent;  /* This is to prevent the card from jumping when hovered */
-    margin: 10px;
-    margin-bottom: 20px;
-    flex-direction: column;
+body {
+    font-family: 'Roboto', sans-serif;
+    padding-left: 150px;
+    padding-right: 150px;
 }
 
+h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: var(--primary);
+}
+
+/* individual project card in a grid */
+.card {
+    border: 1px solid transparent;  /* This is to prevent the card from jumping when hovered */
+    margin-bottom: 20px;
+    flex-direction: column;
+    flex: 1 1 calc(33.33% - 20px);
+    height: 100%;
+}
 .card:hover {
     border: 1px solid var(--primary);
     opacity: 75%;
 }
 
+/* overlay for a project, takes up most of the screen */
 .overlay {
     top: 0;
     position: fixed;
@@ -26,6 +38,7 @@
     height: 90%;
 }
 
+/* styles pertaining to both card and overlay, for projects */
 .project-box {
     border-radius: 10px;
     background-color: rgb(245, 243, 243);
@@ -47,10 +60,17 @@
     object-fit: cover;
 }
 
-.blur {
-    filter: blur(5px);
+.button {
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1; /* Ensure the button is above the image */
+    cursor: pointer;
 }
-
 .button-img {
     height: auto;
     width: 50px;
@@ -62,16 +82,4 @@
     -moz-user-select: none;
     -o-user-select: none;
     user-select: none;
-}
-
-.button {
-    background-color: white;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 1; /* Ensure the button is above the image */
-    cursor: pointer;
 }

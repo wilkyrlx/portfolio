@@ -5,6 +5,7 @@ import styles from '@/styles/Home.module.css'
 import Header from '@/components/Header'
 import Overlays from '@/components/ProjectOverlay'
 import Projects from '@/components/ProjectCard'
+import About from '@/components/About'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,6 +21,7 @@ export default function Home() {
             <main className={styles.main}>
                 <div id="main-content">
                     <Header />
+                    <About  />
                     <Projects />
                 </div>
                 <Overlays />
