@@ -1,8 +1,8 @@
 
 interface IProject {
     id: number;
-    name: string;           // Project name
-    img: string;            // Image path
+    name: string;          
+    img: string;            
     description: string;    
     githubUrl: string;
     demoUrl?: string;       // Optional demo url/alternate url

@@ -29,7 +29,13 @@ function ProjectOverlay({ ...project }: IProject) {
             </div>
             <h2 className="ml-10 text-xl font-bold text-gray-800">{project.name}</h2>
             <p className="ml-10 text-gray-500">{project.description}</p>
-            <p>test</p>
+            <div className="project-links">
+                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer"> tt </a>
+                {
+                    // only show the demo link if it exists
+                    project.hasOwnProperty("demoUrl") &&  <a href={project.demoUrl} target="_blank" rel="noopener noreferrer"> fftt </a>
+                }
+            </div>
         </div>
     );
 }
