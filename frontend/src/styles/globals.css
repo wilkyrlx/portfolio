@@ -65,10 +65,6 @@ h1 {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 1; /* Ensure the button is above the image */
     cursor: pointer;
 }
 .button-img {
@@ -82,4 +78,11 @@ h1 {
     -moz-user-select: none;
     -o-user-select: none;
     user-select: none;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1; /* Ensure the button is above the image */
 }
