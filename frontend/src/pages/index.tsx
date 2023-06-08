@@ -25,8 +25,8 @@ export default function Home() {
                         <About />
                         <Projects />
                     </div>
-                    <Overlays />
                 </div>
+                <Overlays />
             </main>
         </>
     )

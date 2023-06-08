@@ -1,6 +1,10 @@
 import IProject from "@/types/IProject";
 import projects from '../data/projects.json' assert { type: 'json' };
-import Image from 'next/image';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import IconButton from "./IconButton";
+
+
+
 
 // unblur the entire background, hide the overlay
 // TODO: use react state for this to remove bugs
@@ -32,33 +36,22 @@ function ProjectOverlay({ ...project }: IProject) {
      */
     return (
         <div className="overlay project-box collapse" key={project.id} id={"project-overlay-" + project.id}>
-            <div className="tab-header">
-                <Image src={"/images/" + project.img} alt="" width={100} height={100} />
-                <div className="close-button w-16 h-16 rounded-full bg-white flex items-center justify-center cursor-pointer" onClick={event => closeOverlay(project.id)}>
-                    <Image src="/icons/close.svg" alt="Close" width={20} height={20} className="w-14 h-14" />
+            <div className="w-40% h-70% bg-gray-200 rounded-lg flex flex-col">
+                <div className="relative flex justify-end">
+                    <button onClick={() => closeOverlay(project.id)} className="absolute top-2 right-2 w-10 h-10 bg-white rounded-full"></button>
                 </div>
-            </div>
-            <a href={project.githubUrl}>
-                <h2 className="ml-10 text-xl font-bold text-gray-800">{project.name}</h2>
-            </a>
-            <p className="ml-10 text-gray-500">{project.description}</p>
-            <div className="project-links">
-                {
-                    project.hasOwnProperty("githubUrl") && 
-                    <a href={project.githubUrl} target="_blank">
-                        <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center">
-                            <Image src="/icons/github-logo.png" alt="GitHub" width={20} height={20} className="w-14 h-14" />
-                        </div>
-                    </a>
-                }
-                {
-                    project.hasOwnProperty("demoUrl") && 
-                    <a href={project.githubUrl} target="_blank">
-                        <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center">
-                            <Image src="/icons/link.svg" alt="Demo" width={20} height={20} className="w-14 h-14" />
-                        </div>
-                    </a>                    
-                }
+                <div className="rounded-t-lg bg-gray-300">
+                    <img src={"/images/" + project.img} className="w-full h-96 object-cover object-center rounded-t-lg" alt="" />
+                </div>
+                <div className="p-4">
+                    <h2 className="text-xl font-bold">Box Header</h2>
+                    <div className="flex justify-start mt-4 space-x-2">
+                        <IconButton icon={faGithub} link={project.githubUrl} />
+                        <button className="px-4 py-2 bg-white text-gray-800 rounded-full">Button 2</button>
+                        <button className="px-4 py-2 bg-white text-gray-800 rounded-full">Button 3</button>
+                    </div>
+                    <p className="mt-4">Some text goes here...</p>
+                </div>
             </div>
         </div>
     );
