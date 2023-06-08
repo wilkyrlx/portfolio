@@ -25,12 +25,16 @@ function closeOverlay(projectId: number) {
 function ProjectOverlay({ ...project }: IProject) {
     // TODO: should the title link be the github repo, or the demo?
     // TODO: title should change color on hover and be bigger
+    // TODO: do buttons like this? 
+    /*
+    text-lg w-9 h-9 rounded-full text-gray-800 transition-colors duration-150 hover:bg-gray-100 inline-flex items-center justify-center border dark:bg-transparent dark:border-gray-300 dark:text-white ring-blue-500 focus:ring-2 focus:outline-none
+     */
     return (
         <div className="overlay project-box collapse" key={project.id} id={"project-overlay-" + project.id}>
             <div className="tab-header">
                 <Image src={"/images/" + project.img} alt="" width={100} height={100} />
-                <div className="button close-button" onClick={event => closeOverlay(project.id)}>
-                    <Image src="/icons/close.svg" alt="Close" width={20} height={20} className="button-img" />
+                <div className="close-button w-16 h-16 rounded-full bg-white flex items-center justify-center cursor-pointer" onClick={event => closeOverlay(project.id)}>
+                    <Image src="/icons/close.svg" alt="Close" width={20} height={20} className="w-14 h-14" />
                 </div>
             </div>
             <a href={project.githubUrl}>
@@ -41,16 +45,16 @@ function ProjectOverlay({ ...project }: IProject) {
                 {
                     project.hasOwnProperty("githubUrl") && 
                     <a href={project.githubUrl} target="_blank">
-                        <div className="button">
-                            <Image src="/icons/github-logo.png" alt="GitHub" width={20} height={20} className="button-img" />
+                        <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center">
+                            <Image src="/icons/github-logo.png" alt="GitHub" width={20} height={20} className="w-14 h-14" />
                         </div>
                     </a>
                 }
                 {
                     project.hasOwnProperty("demoUrl") && 
                     <a href={project.githubUrl} target="_blank">
-                        <div className="button">
-                            <Image src="/icons/link.svg" alt="Demo" width={20} height={20} className="button-img" />
+                        <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center">
+                            <Image src="/icons/link.svg" alt="Demo" width={20} height={20} className="w-14 h-14" />
                         </div>
                     </a>                    
                 }
