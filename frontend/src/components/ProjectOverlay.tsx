@@ -3,6 +3,7 @@ import projects from '../data/projects.json' assert { type: 'json' };
 import Image from 'next/image';
 
 // unblur the entire background, hide the overlay
+// TODO: use react state for this to remove bugs
 function closeOverlay(projectId: number) {
     const mainContent: HTMLElement = document.querySelector('#main-content') as HTMLElement;
     const overlay: HTMLElement | null = document.querySelector('#project-overlay-' + projectId.toString());

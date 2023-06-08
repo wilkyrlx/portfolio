@@ -19,13 +19,14 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main className={styles.main}>
-                <Header />
-                <div className='pl-48 pr-48'>
-                    <About />
-                    <Projects />
+                <div id="main-content">
+                    <Header />
+                    <div className='pl-48 pr-48'>
+                        <About />
+                        <Projects />
+                    </div>
+                    <Overlays />
                 </div>
-                <Overlays />
-
             </main>
         </>
     )
