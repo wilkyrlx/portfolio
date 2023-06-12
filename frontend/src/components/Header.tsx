@@ -13,12 +13,8 @@ function Header() {
             <div className="space-x-1.5 flex items-center">
                 <IconButton icon={faGithub} link={misc.links.github} />
                 <IconButton icon={faLinkedin} link={misc.links.linkedin} />
-                <a href={misc.links.resume} className="text-lg w-14 h-14 rounded-full text-gray-800 transition-colors duration-150 hover:bg-gray-100 inline-flex
-              items-center justify-center ring-blue-500 focus:ring-2 focus:outline-none">
-                    <FontAwesomeIcon icon={faFile} style={{ color: "black", width: 25 }} />
-                </a>            
+                <IconButton icon={faFile} link={misc.links.resume} width={25} />        
             </div>
-
         </header>
     );
 }
