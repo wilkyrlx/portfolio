@@ -1,5 +1,5 @@
-import { IconDefinition, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon, FontAwesomeIconProps } from '@fortawesome/react-fontawesome';
+import { IconDefinition } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function IconButton({icon, link, width}: {icon: IconDefinition, link: any, width?: number}) {
     const widthActual = width ? width : 35;

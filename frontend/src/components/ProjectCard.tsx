@@ -13,9 +13,9 @@ function openProject(projectId: number) {
     overlay.classList.remove('collapse');
 }
 
-function ProjectCard({ ...project }: IProject) {
+function ProjectCard({ project, setCurrentOverlay }: { project: IProject, setCurrentOverlay: Function }) {
     return (
-        <div className="card project-box rounded-lg" key={project.id} onClick={event => openProject(project.id)}>
+        <div className="card project-box rounded-lg" key={project.id} onClick={event => setCurrentOverlay(project.id)}>
             <div className="rounded-t-lg bg-gray-300">
                 <img src={"/images/" + project.img} className="w-full h-36 object-cover object-center rounded-t-lg" alt="" />
             </div>
@@ -25,7 +25,7 @@ function ProjectCard({ ...project }: IProject) {
     );
 }
 
-function Projects() {
+function Projects({ setCurrentOverlay }: { setCurrentOverlay: Function }) {
     return (
         <div>
             <h1>Projects</h1>
@@ -34,7 +34,7 @@ function Projects() {
                     projects.projects.map((projectData: IProject) => {
                         return (
                             <div>
-                                <ProjectCard {...projectData} />
+                                <ProjectCard project={projectData} setCurrentOverlay={setCurrentOverlay} />
                             </div>
                         )
                     })

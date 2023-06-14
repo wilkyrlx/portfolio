@@ -8,7 +8,7 @@ import IconButton from './IconButton';
 
 function Header() {
     return (
-        <header className="flex items-center justify-between px-4 py-2 bg-blue-100 text-white pl-48 pr-48">
+        <header className="flex items-center justify-between px-4 py-2 bg-blue-100 text-white pl-8 pr-8 md:pl-48 md:pr-48">
             <h1>test</h1>
             <div className="space-x-1.5 flex items-center">
                 <IconButton icon={faGithub} link={misc.links.github} />
