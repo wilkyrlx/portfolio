@@ -2,10 +2,12 @@ import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Header from '@/components/Header'
-import Overlays from '@/components/ProjectOverlay'
 import Projects from '@/components/ProjectCard'
 import About from '@/components/About'
 import { use, useEffect, useState } from 'react'
+import ProjectOverlay from '@/components/ProjectOverlay'
+import projects from '../data/projects.json' assert { type: 'json' };
+import IProject from '@/types/IProject'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,15 +19,22 @@ export default function Home() {
         if (currentOverlay != -1) {
             console.log(currentOverlay);
             const mainContent: HTMLElement = document.querySelector('#main-content') as HTMLElement;
-            const overlay: HTMLElement | null = document.querySelector('#project-overlay-' + currentOverlay.toString());
-            if (!overlay) {
-                console.error("Overlay not found on open");
-                return;
-            }
             mainContent.classList.add('blur-sm');
-            overlay.classList.remove('collapse');
+        } else {
+            const mainContent: HTMLElement = document.querySelector('#main-content') as HTMLElement;
+            mainContent.classList.remove('blur-sm');
         }
     }, [currentOverlay])
+
+    function lookupProject(id: number): IProject {
+        const projectArray: IProject[] = projects.projects;
+        for (let i = 0; i < projectArray.length; i++) {
+            if (projectArray[i].id == id) {
+                return projectArray[i];
+            }
+        }
+        return {} as IProject;
+    }
 
     return (
         <>
@@ -43,7 +52,7 @@ export default function Home() {
                         <Projects setCurrentOverlay={setCurrentOverlay} />
                     </div>
                 </div>
-                <Overlays />
+                { currentOverlay != -1 && <ProjectOverlay project={lookupProject(currentOverlay)} setCurrentOverlay={setCurrentOverlay} /> }
             </main>
         </>
     )

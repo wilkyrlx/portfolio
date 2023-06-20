@@ -1,21 +1,9 @@
 import IProject from "../types/IProject";
 import projects from '../data/projects.json' assert { type: 'json' };
 
-// blur the entire background, show the overlay
-function openProject(projectId: number) {
-    const mainContent: HTMLElement = document.querySelector('#main-content') as HTMLElement;
-    const overlay: HTMLElement | null = document.querySelector('#project-overlay-' + projectId.toString());
-    if (!overlay) {
-        console.error("Overlay not found on open");
-        return;
-    }
-    mainContent.classList.add('blur-sm');
-    overlay.classList.remove('collapse');
-}
-
 function ProjectCard({ project, setCurrentOverlay }: { project: IProject, setCurrentOverlay: Function }) {
     return (
-        <div className="card project-box rounded-lg" key={project.id} onClick={event => setCurrentOverlay(project.id)}>
+        <div className="card project-box rounded-lg" key={project.id} onClick={() => setCurrentOverlay(project.id)}>
             <div className="rounded-t-lg bg-gray-300">
                 <img src={"/images/" + project.img} className="w-full h-36 object-cover object-center rounded-t-lg" alt="" />
             </div>
