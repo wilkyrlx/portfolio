@@ -5,35 +5,52 @@
         {
             "id": 1,
             "name": "On Deck!",
-            "img": "sports.jpg",
-            "description": "Developed a scalable e-commerce platform with advanced search functionality, seamless payment integration, and personalized recommendations, resulting in a 30% increase in conversion rates.",
-            "githubUrl": "dummy-url",
-            "demoUrl": "dummy-url",
+            "img": "demo-ss.jpg",
+            "description": "A convenient aggregated sports calendar for all your favorite teams.",
+            "githubUrl": "https://github.com/wilkyrlx/on-deck/",
             "tags": ["React", "TypeScript", "Firebase", "Featured"]
         },
         {
             "id": 2,
-            "name": "#2",
-            "img": "dummy image",
-            "description": "Designed and implemented a real-time data analytics dashboard using Python and Elasticsearch, empowering business stakeholders to make data-driven decisions and reducing reporting time by 50%.",
-            "githubUrl": "dummy-url",
-            "tags": ["React", "TypeScript", "Firebase", "Featured"]
+            "name": "Autonomous Aerial Drone",
+            "img": "sports.jpg",
+            "description": "An autonomous drone capable of stable flight and landmark detection through a PID controller, SLAM algorithm, and edge computer vision."
         },
         {
             "id": 3,
-            "name": "#3",
-            "img": "dummy image",
-            "description": "Led a cross-functional team in building a mobile app for a healthcare startup, utilizing React Native and Firebase, which enhanced patient engagement and achieved a 20% reduction in appointment cancellations.",
-            "githubUrl": "dummy-url",
-            "tags": ["React", "TypeScript", "Firebase", "Featured"]
+            "name": "Tigro App",
+            "img": "sports.jpg",
+            "description": "Android app for the tigro research project, which aims to provide grassroots protestors with a secure and anonymous way to communicate and organize. Working with encrypted databases and shared secret key generation."
         },
         {
             "id": 4,
-            "name": "#4",
+            "name": "Parakeet.ai",
             "img": "sports.jpg",
-            "description": "Collaborated with a team of engineers to architect and implement a microservices-based architecture using Docker and Kubernetes, resulting in improved scalability, fault tolerance, and reduced deployment time by 75%.",
-            "githubUrl": "dummy-url",
-            "tags": ["React", "TypeScript", "Firebase", "Featured"]
+            "description": "A frictionless experience to allow the elderly to share rich stories with their loved ones while generating data for AI avatars. Our submission for the 36-hour HackHarvard 2023 hackathon.",
+            "githubUrl": "https://github.com/wilkyrlx/parakeet.ai",
+            "demoUrl": "https://parakeet-5e1a9.web.app/"
+        },
+        {
+            "id": 5,
+            "name": "Github Folders",
+            "img": "sports.jpg",
+            "description": "A chrome extension that allows you to organize important Github repositories into folders.",
+            "githubUrl": "https://github.com/wilkyrlx/github-folders"
+        },
+        {
+            "id": 6,
+            "name": "Masterlock Combo-breaker",
+            "img": "sports.jpg",
+            "description": "A device that can crack a Masterlock combination lock in 16 combinations or less. Exploits a vulnerability in the Masterlock design to reduce the search space by 99%. Built with Arduino.",
+            "githubUrl": "https://github.com/wilkyrlx/combo-breaker"
+        },
+        {
+            "id": 7,
+            "name": "Localdex",
+            "img": "sports.jpg",
+            "description": "Locally hosted CRM",
+            "githubUrl": "https://github.com/wilkyrlx/localdex"
         }
+        
     ]
 }

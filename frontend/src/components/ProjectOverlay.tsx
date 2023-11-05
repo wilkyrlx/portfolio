@@ -40,7 +40,7 @@ function ProjectOverlay({ project, setCurrentOverlay }: { project: IProject, set
                         {project.githubUrl && <IconButton icon={faGithub} link={project.githubUrl} />}
                         {project.demoUrl && <IconButton icon={faLink} link={project.demoUrl} />}
                     </div>
-                    <p className="mt-4">Some text goes here...</p>
+                    <p className="mt-4">{project.description}</p>
                 </div>
             </div>
         </div>

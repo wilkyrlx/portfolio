@@ -6,7 +6,7 @@ interface IProject {
     description: string;    
     githubUrl?: string;
     demoUrl?: string;       // Optional demo url/alternate url
-    tags: string[];
+    tags?: string[];
 }
 
 export default IProject;

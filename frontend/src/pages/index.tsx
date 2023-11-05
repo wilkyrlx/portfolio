@@ -13,6 +13,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
 
+    // TODO: use project objects instead of ID
     const [currentOverlay, setCurrentOverlay] = useState<number>(-1)
 
     useEffect(() => {
@@ -39,7 +40,7 @@ export default function Home() {
     return (
         <>
             <Head>
-                <title>Create Next App</title>
+                <title>John Wilkinson</title>
                 <meta name="description" content="Portfolio by John Wilkinson" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
