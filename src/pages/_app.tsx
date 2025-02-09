@@ -1,7 +1,7 @@
-import { FC, useEffect } from 'react';
+import { FC } from 'react';
 import styles from '@/styles/layout.module.css';
+import '@/styles/globals.css';
 import Sidebar from '@/layouts/Sidebar';
-import PortfolioCard from '@/components/PortfolioCard';
 import PortfolioContainer from '@/layouts/PortfolioContainer';
 import MongoDBCard from '@/cards/MongoDBCard';
 import DroneCard from '@/cards/DroneCard';
@@ -11,7 +11,6 @@ import PovGlobeCard from '@/cards/PovGlobeCard';
 import WebDevCard from '@/cards/WebDevCard';
 import TigroCard from '@/cards/TigroCard';
 import Navbar from '@/layouts/Navbar';
-import BounceButton from '@/components/BounceButton';
 
 const Home: FC = () => {
 

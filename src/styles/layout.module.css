@@ -1,17 +1,4 @@
 /* Layout  - for home, sidebar, spacing, etc. Certain components, like the sidebar, have their own styles too */
-:root {
-  --accent-color: #ffffff;
-  --background-color: #97aedc;
-  --sidebar-color: #9e65b1;
-}
-
-body {
-  background-color: var(--background-color);  /* Light gray background */
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-}
-
 .container {
   display: flex;
   min-height: 100vh;
