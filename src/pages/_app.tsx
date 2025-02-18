@@ -11,6 +11,8 @@ import PovGlobeCard from '@/cards/PovGlobeCard';
 import WebDevCard from '@/cards/WebDevCard';
 import TigroCard from '@/cards/TigroCard';
 import Navbar from '@/layouts/Navbar';
+import { Analytics } from "@vercel/analytics/react"
+
 
 const Home: FC = () => {
 
@@ -30,6 +32,7 @@ const Home: FC = () => {
         </PortfolioContainer>
       </div>
       <Sidebar />
+      <Analytics />
     </div>
   );
 };
